@@ -15,7 +15,7 @@ function getSlotKey(address: bigint, slot: bigint): string {
 
 async function setup() {
   const slotKeyTestFactory = await starknet.getContractFactory(
-    './contracts/starknet/slot_key_test.cairo'
+    './contracts/starknet/test_slot_key.cairo'
   );
 //   console.log(slotKeyTestFactory)
   const slotKeyTest = await slotKeyTestFactory.deploy();
