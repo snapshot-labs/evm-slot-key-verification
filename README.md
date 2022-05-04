@@ -12,3 +12,13 @@ The storage layout hardhat plugin can be used to find the index for the desired 
 
 ![alt text](./storage-layout.png)
 
+
+### Finding the slot key in Cairo
+
+Once you know the index of the slot, you can then call the `get_slot_key` cairo function with the slot index and the solidity mapping key as arguments (eg for finding the key of `balances[_address]`, the mapping key would be `_address`). The interface of `get_slot_key' is as shown:
+```
+func get_slot_key{bitwise_ptr : BitwiseBuiltin*, range_check_ptr}(slot_index: felt, mapping_key: felt) -> (slot_key : Uint256):
+end 
+```
+
+NOTE: This only works for solidity mappings with value types currently 
