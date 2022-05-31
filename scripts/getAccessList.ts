@@ -3,7 +3,7 @@ const Web3 = require('web3');
 async function main() {
     const web3 = new Web3(process.env.GOERLI_URL);
 
-    // LINK goerli balance Of call
+    // Example LINK goerli balanceOf call
     let out = await web3.eth.createAccessList({
         from: '0x3bc5885c2941c5cda454bdb4a8c88aa7f248e312',
         data: '0xf8b2cb4f0000000000000000000000002842c82E20ab600F443646e1BC8550B44a513D82',
